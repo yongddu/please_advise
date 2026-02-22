@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* ******************** 기본 설정 ******************** */
+html {
+  scroll-behavior: auto;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  /* position과 overflow는 JavaScript에서 동적으로 제어 */
+}
+
+/* ******************** 페이지 로더 효과 ******************** */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1.5s ease-out, visibility 1.5s ease-out;
+}
+
+.page-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loading-text {
+  color: #fff;
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+}
+
+/* 페이지 컨텐츠 초기 상태 */
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 0.5s;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.top-nav .n01 {
+  font-style: italic;
+}
+/* ******************** item ******************** */
+.item {
+  position: absolute;
+  display: block;
+  transition: transform 0.3s ease-out;
+  object-fit: contain;
+  transform-style: preserve-3d;
+  will-change: transform;
+  z-index: 120;
+  perspective: 800px;
+  transform-origin: center center;
+}
+.item:hover {
+  filter: invert(1) blur(0.5px) url("#noise");
+  z-index: 130;
+}
+
+.hover-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 650;
+
+  display: block;
+  position: absolute;
+  transition: 0.4s ease;
+  left: 2.0833%;
+  bottom: 3.7037%; /* 화면 하단 여백 기준으로 고정 */
+  z-index: 100; /* 헤더/이미지 아래에 깔리지 않도록 */
+  pointer-events: none; /* 호버 인터랙션 방해 금지 */
+  color: #000;
+}
+
+.hover-date {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: absolute;
+  display: block;
+  transition: 0.4s ease;
+  bottom: 3.7037%;
+  left: 42.44791666666667%;
+  z-index: 100;
+  pointer-events: none;
+  color: #000;
+}
+
+/* ******************** 1행 ******************** */
+.i1,
+.i2,
+.i3,
+.i4 {
+  top: calc(100px);
+  width: 8.6458vw;
+}
+.item.i1 {
+  left: 2.083333333333333%;
+}
+.item.i2 {
+  left: 42.44791666666667%;
+}
+.item.i3 {
+  left: 66.66666666666667%;
+}
+.item.i4 {
+  right: 2.0833%;
+}
+
+/* ******************** 2행 ******************** */
+.i5,
+.i6,
+.i7,
+.i8 {
+  top: calc(101px + 8.6458vw + 25px);
+  width: 8.6458vw;
+}
+.i5 {
+  left: 2.0833%;
+}
+.i6 {
+  left: 26.3021%;
+}
+.i7 {
+  left: 58.5938%;
+}
+.i8 {
+  right: 2.0833%;
+}
+
+/* ******************** 3행 ******************** */
+.i9,
+.i10,
+.i12 {
+  top: calc(101px + (8.6458vw + 11.71875vw) + (25px * 2));
+}
+.i9 {
+  width: 8.6458vw;
+  left: 10.4167%;
+}
+.i10 {
+  left: 42.4479%;
+  width: 15.2604vw;
+}
+.i12 {
+  right: 2.0833%;
+  width: 15.2604vw;
+}
+
+/* ******************** 4행 ******************** */
+.i13,
+.i14,
+.i15,
+.i16 {
+  top: calc(101px + (8.6458vw + 11.71875vw) + (25px * 2) + (8.6458vw + 25px));
+}
+.i13 {
+  width: 11.458333vw;
+  left: 2.0833%;
+}
+.i14 {
+  width: 11.458333vw;
+  left: 18.22916666666667%;
+}
+.i15 {
+  width: 16.45833333333333vw;
+  left: 34.375%;
+}
+.i16 {
+  width: 15vw;
+  left: 58.5938%;
+}
+
+/* ==================== 3D 회전 페이지 전환 효과 ==================== */
+body.page-transition {
+  overflow: hidden;
+}
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.transition-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.item.rotating {
+  position: fixed !important;
+  animation: rotate3DExpand 1.2s ease-in-out forwards;
+  z-index: 9999;
+}
+
+@keyframes rotate3DExpand {
+  0% {
+    transform: perspective(500px) rotateY(0deg) scale(1);
+  }
+  40% {
+    transform: perspective(500px) rotateY(30deg) scale(1.5);
+  }
+  60% {
+    transform: perspective(500px) rotateY(90deg) scale(3);
+  }
+  100% {
+    transform: perspective(500px) rotateY(360deg) scale(15);
+    opacity: 1;
+  }
+}
+
+/* ====================  랜덤 등장 애니메이션 ==================== */
+
+.item {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.item.show {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.6s ease-in-out;
+}
+@keyframes simpleFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.item.animate {
+  animation: simpleFadeIn 1s ease-out;
+}
+
+/* ==================== Top Nav Underline ==================== */
+.nav-underline {
+  position: absolute;
+  height: 2px;
+  background: #000;
+  left: 0;
+  width: 0;
+  /* place it slightly below the nav text centerline */
+  top: calc(50% + 20px);
+  transition: left 0.3s ease, width 0.3s ease;
+  pointer-events: none;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <title>Yongsun portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/textile1.css" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <script src="./js/mouse.js"></script>
+    <script src="./js/textile.js"></script>
+  </head>
+
+  <body>
+    <div id="smooth-wrapper">
+      <header id="header">
+        <div class="top-nav">
+          <a href="./index.html" class="nav home">HOME</a>
+          <a href="./about.html" class="nav about">ABOUT</a>
+        </div>
+      </header>
+
+      <!-- ***********************스크롤 다운 화살표 *********************** -->
+      <div class="drag-down-text" id="dragDownText">
+        SCROLL DOWN
+        <svg
+          class="scroll-arrow"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4L12 20M12 20L6 14M12 20L18 14"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      <div id="smooth-content">
+        <!-- ***********************첫 번째 섹션 *********************** -->
+        <div class="wrap l1 first">
+          <div class="img-wrap">
+            <img src="./img/scaleUp/textile1.png" alt="" />
+            <p>PROCREATE + PHOTOSHOP</p>
+          </div>
+          <div class="explain-wrap">
+            <h1>COMPLICATED I</h1>
+            <h2 class="exp-toggle" data-target="exp-1">+</h2>
+            <div id="exp-1" class="exp-content" hidden>
+              <br />
+              복잡함은 혼돈이 아닌 잠재된 질서입니다. <br /><br />
+              저는 삶과 사물에 내재된 복잡한 요소들, 곧 얽히고설킨 생각과<br />
+              현상들을 직시하고 그것을 해체하는 것에서부터 작업을 시작합니다.<br />
+              마치 수많은 선(線)이 무작위로 얽혀 있는 것처럼 보이지만,<br />
+              이 복잡함 속에는 새로운 질서와 강력한 잠재력이 숨어 있다고
+              믿습니다.<br />
+              <br />
+              이 그림은 그 복잡함을 부정하지 않고 적극적으로 포용한 후,
+              저만의<br />
+              규칙과 통찰을 통해 명료하게 정리하는 과정을 담고 있습니다.<br />
+              무질서해 보이는 모든 요소들이 최종적으로 긍정적인 에너지의
+              구조로<br />
+              변모하고, 이 과정이 관람객의 삶에도 균형과 긍정적인 동력을 제공할
+              수 있기를 바랍니다. <br />
+              혼돈을 긍정으로, 복잡함을 질서로 변환하는 힘,<br /><br />
+              그것이 바로 이 작품이 추구하는 핵심입니다.
+            </div>
+            <div class="bottom-ex-wrap">
+              <h3>VERSION 1</h3>
+              <h4>JUNE, 2022</h4>
+            </div>
+          </div>
+        </div>
+        <!-- ***********************두 번째 섹션 *********************** -->
+        <div class="wrap r1">
+          <div class="img-wrap">
+            <img src="./img/scaleUp/textile2.png" alt="" />
+            <p>PROCREATE + PHOTOSHOP</p>
+          </div>
+          <div class="explain-wrap">
+            <h1>COMPLICATED I</h1>
+            <h2 class="exp-toggle" data-target="exp-2">+</h2>
+            <div id="exp-2" class="exp-content" hidden>
+              가나다라마바사아자차카타파
+            </div>
+            <div class="bottom-ex-wrap">
+              <h3>VERSION 1</h3>
+              <h4>JUNE, 2022</h4>
+            </div>
+          </div>
+        </div>
+        <!-- ***********************세 번째 섹션 *********************** -->
+        <div class="wrap l1">
+          <div class="img-wrap">
+            <img src="./img/scaleUp/textile3.png" alt="" />
+            <p>PROCREATE + PHOTOSHOP</p>
+          </div>
+          <div class="explain-wrap">
+            <h1>COMPLICATED I</h1>
+            <h2 class="exp-toggle" data-target="exp-3">+</h2>
+            <div id="exp-3" class="exp-content" hidden>
+              가나다라마바사아자차카타파
+            </div>
+            <div class="bottom-ex-wrap">
+              <h3>VERSION 1</h3>
+              <h4>JUNE, 2022</h4>
+            </div>
+          </div>
+        </div>
+        <!-- ***********************네 번째 섹션 *********************** -->
+        <div class="wrap r1">
+          <div class="img-wrap">
+            <img src="./img/scaleUp/textile4.png" alt="" />
+            <p>PROCREATE + PHOTOSHOP</p>
+          </div>
+          <div class="explain-wrap">
+            <h1>COMPLICATED I</h1>
+            <h2 class="exp-toggle" data-target="exp-4">+</h2>
+            <div id="exp-4" class="exp-content" hidden>
+              가나다라마바사아자차카타파
+            </div>
+            <div class="bottom-ex-wrap">
+              <h3>VERSION 1</h3>
+              <h4>JUNE, 2022</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ***********************마우스 모양 *********************** -->
+      <div class="black-circle"><div class="inner-circle"></div></div>
+      <div class="inner-circle"></div>
+
+      <!-- ******************** TOP 버튼 ******************** -->
+      <button class="top-btn" id="topBtn">TOP</button>
+
+      <!--******************** 눈 감은 상태 (기본)******************** -->
+      <svg
+        class="ghost"
+        width="50"
+        height="25"
+        viewBox="0 0 150 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#fff"
+          stroke="#000"
+          stroke-width="3"
+          d="
+    M 40 50
+    C 70 60, 130 60, 160 50
+    C 130 40, 70 40, 40 50
+    Z
+  "
+        />
+      </svg>
+
+      <!-- ********************눈 뜬 상태 (호버시)******************** -->
+      <svg
+        id="hippo"
+        width="50"
+        height="25"
+        viewBox="0 0 200 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#666"
+          stroke="#666"
+          stroke-width="3"
+          d="
+    M 40 50
+    C 60 20, 140 20, 160 50
+    C 140 80, 60 80, 40 50
+    Z
+  "
+        />
+        <circle cx="500" cy="10" r="15" fill="#000" />
+      </svg>
+    </div>
+  </body>
+</html>
