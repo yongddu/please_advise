@@ -68,7 +68,9 @@ html {
 body > *:not(.light-overlay) {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease-in, visibility 0s linear 0s;
+  transition:
+    opacity 1s ease-in,
+    visibility 0s linear 0s;
 }
 
 body.content-visible > *:not(.light-overlay) {
@@ -82,7 +84,9 @@ body.content-visible > *:not(.light-overlay) {
   font-size: 6.6rem;
   font-weight: bold;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.5);
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.5);
   position: relative;
   z-index: 10;
 }
@@ -121,17 +125,23 @@ body.content-visible > *:not(.light-overlay) {
 
 @keyframes gallery-glow {
   0% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
-      0 0 30px rgba(255, 255, 255, 0.6), 0 0 45px rgba(255, 255, 255, 0.5);
+    text-shadow:
+      0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 45px rgba(255, 255, 255, 0.5);
   }
   50% {
-    text-shadow: 0 0 30px rgba(255, 255, 255, 1),
-      0 0 60px rgba(255, 255, 255, 1), 0 0 90px rgba(255, 255, 255, 0.9),
+    text-shadow:
+      0 0 30px rgba(255, 255, 255, 1),
+      0 0 60px rgba(255, 255, 255, 1),
+      0 0 90px rgba(255, 255, 255, 0.9),
       0 0 120px rgba(255, 255, 255, 0.8);
   }
   100% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
-      0 0 30px rgba(255, 255, 255, 0.6), 0 0 45px rgba(255, 255, 255, 0.5);
+    text-shadow:
+      0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 45px rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -319,8 +329,10 @@ h1 {
   transform: translate(-50%, -50%) scale(1);
   box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.15);
   opacity: 0.3;
-  transition: transform 1s cubic-bezier(0.4, 1.4, 0.6, 1),
-    opacity 0.25s cubic-bezier(0.4, 1.4, 0.6, 1), box-shadow 0.25s;
+  transition:
+    transform 1s cubic-bezier(0.4, 1.4, 0.6, 1),
+    opacity 0.25s cubic-bezier(0.4, 1.4, 0.6, 1),
+    box-shadow 0.25s;
   pointer-events: none;
 }
 
@@ -329,7 +341,9 @@ body.hovering .black-circle .inner-circle {
   opacity: 1;
   width: 8px;
   height: 8px;
-  box-shadow: 0 0 18px 6px rgba(255, 255, 255, 0.35), 0 0 2px 1px #fff;
+  box-shadow:
+    0 0 18px 6px rgba(255, 255, 255, 0.35),
+    0 0 2px 1px #fff;
 }
 
 ::selection {
